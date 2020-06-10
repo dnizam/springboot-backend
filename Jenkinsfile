@@ -16,7 +16,7 @@ pipeline{
         }
         stage('git checkout'){
             steps{
-                    git 'https://github.com/dnizam/bootcamp-internal.git'
+                    git 'https://github.com/dnizam/springboot-backend.git'
             }    
         }
         stage('git test'){
