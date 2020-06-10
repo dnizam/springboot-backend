@@ -10,7 +10,7 @@ pipeline{
                 sh '''
                     git --version
                     docker --version
-                    npm -v
+                    mvn --version
                 '''
             }    
         }
