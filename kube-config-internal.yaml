@@ -21,13 +21,6 @@ spec:
         ports:
         - containerPort: 8082
           name: "events-port"
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "0.1"
-          limits:
-            memory: "512Mi"
-            cpu: "0.5"
         livenessProbe:
           httpGet:
             path: /
