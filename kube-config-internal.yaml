@@ -18,11 +18,15 @@ spec:
       containers:
       - name: mysql-hibernate
         image: mysql:5.6
-        environment:
-            MYSQL_ROOT_PASSWORD: password
-            MYSQL_DATABASE: test
-            MYSQL_USER: sa
-            MYSQL_PASSWORD: password
+        env:
+            -name: MYSQL_ROOT_PASSWORD
+             value: password
+            -name: MYSQL_DATABASE
+             value: test
+            -name: MYSQL_USER
+             value: sa
+            -name: MYSQL_PASSWORD
+             value: password
       - name: spring-boot-mysql-hibernate
         image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_16
         ports:
