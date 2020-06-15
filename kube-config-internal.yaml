@@ -20,13 +20,13 @@ spec:
         image: mysql:5.6
         env:
             -name: MYSQL_ROOT_PASSWORD
-             value: password
+             value: "password"
             -name: MYSQL_DATABASE
-             value: test
+             value: "test"
             -name: MYSQL_USER
-             value: sa
+             value: "sa"
             -name: MYSQL_PASSWORD
-             value: password
+             value: "password"
       - name: spring-boot-mysql-hibernate
         image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_16
         ports:
