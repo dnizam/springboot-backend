@@ -1,5 +1,5 @@
 CREATE TABLE users (
-id number,
+id int,
 email  varchar(50),
 name varchar(20);
 );
