@@ -15,12 +15,14 @@ spec:
       labels:
         app: events-data
     spec:
-    - name: spring-boot-mysql-hibernate
-      image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_22
-    ports:
-    - containerPort: 8082
-      name: "events-port"
-    livenessProbe:
+      containers:
+      - name: spring-boot-mysql-hibernate
+        image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_22
+        ports:
+        - containerPort: 8082
+          name: "events-port"
+        
+        livenessProbe:
           httpGet:
             path: /
             port: 8082
@@ -40,4 +42,3 @@ spec:
   selector: 
     app: events-data
   type: LoadBalancer
----
