@@ -28,7 +28,7 @@ spec:
         - name: MYSQL_PASSWORD
           value: "password"
       - name: spring-boot-mysql-hibernate
-        image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_19
+        image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_20
         ports:
         - containerPort: 8082
           name: "events-port"
