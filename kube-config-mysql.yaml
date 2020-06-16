@@ -30,10 +30,7 @@ spec:
         ports:
         - containerPort: 3306
           name: "mysql-port"
-        volumeMounts:
-        - name: mysql-persistent-storage
-          mountPath: /var/lib/mysql
-        
+                
         livenessProbe:
           httpGet:
             path: /
