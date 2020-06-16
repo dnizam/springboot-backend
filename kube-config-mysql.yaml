@@ -18,7 +18,7 @@ spec:
       containers:
       - name: mysql-hibernate
         image: mysql:5.6
-		    env:
+        env:
         - name: MYSQL_ROOT_PASSWORD
           value: "password"
         - name: MYSQL_DATABASE
