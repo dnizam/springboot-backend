@@ -30,6 +30,13 @@ spec:
         ports:
         - containerPort: 3306
           name: "mysql-port"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3306
+          initialDelaySeconds: 60
+          periodSeconds: 60
+          
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
@@ -38,12 +45,7 @@ spec:
         persistentVolumeClaim:
           claimName: mysql-pv-claim
                 
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3306
-          initialDelaySeconds: 60
-          periodSeconds: 60
+      
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
