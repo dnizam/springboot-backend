@@ -30,12 +30,12 @@ spec:
         ports:
         - containerPort: 3306
           name: "mysql-port"
-        livenessProbe:
-          httpGet:
-            path: /
-            port: 3306
-          initialDelaySeconds: 60
-          periodSeconds: 60
+        #livenessProbe:
+          #httpGet:
+            #path: /
+            #port: 3306
+          #initialDelaySeconds: 60
+          #periodSeconds: 60
           
         volumeMounts:
         - name: mysql-persistent-storage
