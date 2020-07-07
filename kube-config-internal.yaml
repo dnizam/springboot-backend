@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-mysql-hibernate
-        image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_24
+        image: gcr.io/myproject-278611/spring-boot-mysql-hibernate:V_30
         ports:
         - containerPort: 8082
           name: "events-port"
